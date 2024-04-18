@@ -13,13 +13,23 @@ class _MyWidgetState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Character'),
-        centerTitle: true,
-        backgroundColor: Colors.purple,
       ),
       body: Container(
-        padding: const EdgeInsets.all(16),
-        child: const Text('General Kenobi!'),
-      ),
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            children: [
+              const Text('Character List'),
+              Text(
+                'Character List',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              Text(
+                'Character List',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              FilledButton(onPressed: () {}, child: const Text('Create new'))
+            ],
+          )),
     );
   }
 }
