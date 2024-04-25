@@ -1,3 +1,4 @@
+import 'package:character_creator/shared/styled_button.dart';
 import 'package:character_creator/shared/styled_text.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,8 @@ class _MyWidgetState extends State<Home> {
               const StyledText('Character List'),
               const StyledHeadline('Character List'),
               const StyledTitle('Character List'),
-              FilledButton(onPressed: () {}, child: const Text('Create new'))
+              StyledButton(
+                  onPressed: () {}, child: const StyledHeadline('Create new'))
             ],
           )),
     );
