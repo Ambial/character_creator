@@ -27,9 +27,12 @@ class HomeState extends State<Home> {
                 child: ListView.builder(
                   itemCount: characters.length,
                   itemBuilder: (context, index) {
-                    return ListTile(
-                      tileColor: Colors.grey[800],
-                      title: StyledText(characters[index]),
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: ListTile(
+                        tileColor: Colors.grey[800],
+                        title: StyledText(characters[index]),
+                      ),
                     );
                   },
                 ),
