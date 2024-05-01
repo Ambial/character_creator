@@ -12,24 +12,32 @@ class AppColors {
 }
 
 ThemeData primaryTheme = ThemeData(
-    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
-    scaffoldBackgroundColor: AppColors.secondaryAccent,
-    appBarTheme: AppBarTheme(
-        backgroundColor: AppColors.secondaryColor,
-        foregroundColor: AppColors.textColor,
-        surfaceTintColor: Colors.transparent,
-        centerTitle: true),
-    textTheme: TextTheme(
-      bodyMedium:
-          TextStyle(color: AppColors.textColor, fontSize: 16, letterSpacing: 1),
-      headlineMedium: TextStyle(
-          color: AppColors.titleColor,
-          fontWeight: FontWeight.bold,
-          fontSize: 16,
-          letterSpacing: 1),
-      titleMedium: TextStyle(
-          color: AppColors.titleColor,
-          fontWeight: FontWeight.bold,
-          fontSize: 18,
-          letterSpacing: 2),
-    ));
+  colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+  scaffoldBackgroundColor: AppColors.secondaryAccent,
+  appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.secondaryColor,
+      foregroundColor: AppColors.textColor,
+      surfaceTintColor: Colors.transparent,
+      centerTitle: true),
+  textTheme: TextTheme(
+    bodyMedium:
+        TextStyle(color: AppColors.textColor, fontSize: 16, letterSpacing: 1),
+    headlineMedium: TextStyle(
+        color: AppColors.titleColor,
+        fontWeight: FontWeight.bold,
+        fontSize: 16,
+        letterSpacing: 1),
+    titleMedium: TextStyle(
+        color: AppColors.titleColor,
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+        letterSpacing: 2),
+  ),
+  //card theme
+  cardTheme: CardTheme(
+      color: AppColors.secondaryColor.withOpacity(0.5),
+      surfaceTintColor: Colors.transparent,
+      shape: const RoundedRectangleBorder(),
+      shadowColor: Colors.transparent,
+      margin: const EdgeInsets.only(bottom: 16)),
+);

@@ -1,7 +1,7 @@
+import 'package:character_creator/screens/home/character_card.dart';
 import 'package:character_creator/shared/styled_button.dart';
 import 'package:character_creator/shared/styled_text.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -27,13 +27,7 @@ class HomeState extends State<Home> {
                 child: ListView.builder(
                   itemCount: characters.length,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      child: ListTile(
-                        tileColor: Colors.grey[800],
-                        title: StyledText(characters[index]),
-                      ),
-                    );
+                    return CharacterCard(characters[index]);
                   },
                 ),
               ),
